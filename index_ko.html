@@ -43,9 +43,10 @@
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--line);
     }
-    nav .wrap { display: flex; gap: 22px; padding-top: 14px; padding-bottom: 14px; font-size: 15px; }
+    nav .wrap { display: flex; flex-wrap: wrap; gap: 8px 22px; padding-top: 14px; padding-bottom: 14px; font-size: 15px; }
     nav a { color: var(--muted); }
     nav a:hover { color: var(--accent); text-decoration: none; }
+    nav .lang { margin-left: auto; }
 
     header { padding: 72px 0 40px; }
     .hello { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: .04em; }
@@ -84,6 +85,23 @@
     .pubs .meta { color: var(--muted); font-size: 14px; }
     .pubs b { color: var(--text); }
 
+    .org-logo { display: inline-block; margin-bottom: 20px; line-height: 0; }
+    .org-logo img { height: 28px; width: auto; display: block; }
+    @media (prefers-color-scheme: dark) {
+      .org-logo { background: #ffffff; padding: 8px 12px; border-radius: 8px; }
+    }
+    .hero { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .hero-text { flex: 1; min-width: 0; }
+    .photo {
+      width: 180px; height: 225px; flex-shrink: 0;
+      object-fit: cover; object-position: top;
+      border-radius: 16px; border: 1px solid var(--line);
+    }
+    @media (max-width: 560px) {
+      .hero { flex-direction: column-reverse; align-items: flex-start; gap: 24px; }
+      .photo { width: 140px; height: 175px; }
+    }
+
     footer { padding: 32px 0 56px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
 
     @media (max-width: 560px) {
@@ -102,18 +120,28 @@
       <a href="#research">연구 관심사</a>
       <a href="#publications">논문</a>
       <a href="#contact">연락처</a>
+      <a class="lang" href="index.html">English</a>
     </div>
   </nav>
 
   <div class="wrap">
 
     <header>
+      <div class="hero">
+        <div class="hero-text">
+        <a class="org-logo" href="https://www.kistep.re.kr/eng/" target="_blank" rel="noopener" aria-label="KISTEP website">
+          <img src="kistep_logo.svg" alt="KISTEP - Korea Institute of S&amp;T Evaluation and Planning">
+        </a>
+        
       <div class="hello">안녕하세요</div>
-            <h1>Hanul Kim</h1>
-      <p class="tagline">고체물리학 연구자에서 과학기술정책 연구자로.<br>KISTEP(한국과학기술기획평가원)</p>
+      <h1>Hanul Kim</h1>
+      <p class="tagline">KISTEP(한국과학기술기획평가원) 혁신전략본부 데이터분석혁신센터 부연구위원.<br>고체물리학 연구자 출신의 과학기술정책 연구자.</p>
       <div class="links">
         <a class="btn primary" href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a class="btn" href="mailto:hkim@kistep.re.kr">이메일</a>
+      </div>
+        </div>
+        <img class="photo" src="photo.jpg" alt="Hanul Kim">
       </div>
     </header>
 
@@ -181,11 +209,11 @@
 
     <section id="publications">
       <h2>논문</h2>
-      <p>전체 목록과 인용 정보는 <a href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar 프로필</a>에서 볼 수 있습니다. 아래는 주요 논문이며, 굵은 글씨가 저입니다.</p>
+      <p>물리학 연구 시기의 제1저자 및 공동 제1저자 논문이며, 굵은 글씨가 저입니다. 공저 논문을 포함한 전체 목록과 인용 정보는 <a href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar 프로필</a>에서 볼 수 있습니다.</p>
       <ul class="pubs">
         <li>
-          <span class="title">Origins of genuine Ohmic van der Waals contact between indium and MoS<sub>2</sub></span>
-          <span class="meta">BK Kim, TH Kim, DH Choi, <b>H Kim</b>, K Watanabe, T Taniguchi, H Rho, et al. · <i>npj 2D Materials and Applications 5, 9</i> (2021)</span>
+          <span class="title">Temperature dependent Raman spectroscopy of shear and layer breathing modes in bilayer MoS<sub>2</sub></span>
+          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Current Applied Physics 25, 41–46</i> (2021)</span>
         </li>
         <li>
           <span class="title">Polarization-dependent anisotropic Raman response of CVD-grown vertically stacked MoS<sub>2</sub> layers</span>
@@ -204,24 +232,12 @@
           <span class="meta">D Kim<sup>†</sup>, <b>H Kim</b><sup>†</sup>, WS Yun, K Watanabe, T Taniguchi, H Rho, MH Bae · <i>2D Materials 5, 025009</i> (2018)</span>
         </li>
         <li>
-          <span class="title">Temperature dependent Raman spectroscopy of shear and layer breathing modes in bilayer MoS<sub>2</sub></span>
-          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Current Applied Physics 25, 41–46</i> (2021)</span>
-        </li>
-        <li>
           <span class="title">Polarized and spatially resolved Raman scattering from composition-graded wurtzite InGaAs nanowires</span>
           <span class="meta"><b>H Kim</b>, H Rho, EH Lee, JD Song · <i>Journal of Physics D: Applied Physics 49, 175105</i> (2016)</span>
         </li>
         <li>
-          <span class="title">Resonant and polarized Raman scattering from single CdS/CdSe core–shell nanowires</span>
-          <span class="meta">JH Kim, <b>H Kim</b>, H Rho, YJ Choi, JG Park · <i>Journal of Physics D: Applied Physics 47, 135104</i> (2014)</span>
-        </li>
-        <li>
           <span class="title">Effect of Si doping on epitaxial lateral overgrowth of GaN: A spatially resolved micro-Raman scattering study</span>
           <span class="meta"><b>H Kim</b>, H Rho, LW Jang, IH Lee · <i>Current Applied Physics 13, 267–270</i> (2013)</span>
-        </li>
-        <li>
-          <span class="title">Coherent transverse-optical phonon generation induced by lattice defects in nitrogen-ion-implanted GaAs</span>
-          <span class="meta">JS Kim, HC Ryu, SH Kim, <b>H Kim</b>, H Rho, YJ Kim, YS Lim, KJ Yee · <i>Applied Physics Letters 103, 171905</i> (2013)</span>
         </li>
       </ul>
       <p style="color:var(--muted);font-size:14px;margin-top:14px"><sup>†</sup> 공동 제1저자 (equal contribution)</p>

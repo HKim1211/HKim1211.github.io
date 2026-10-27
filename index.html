@@ -97,6 +97,23 @@
     .pubs .meta { color: var(--muted); font-size: 14px; }
     .pubs b { color: var(--text); }
 
+    .org-logo { display: inline-block; margin-bottom: 20px; line-height: 0; }
+    .org-logo img { height: 28px; width: auto; display: block; }
+    @media (prefers-color-scheme: dark) {
+      .org-logo { background: #ffffff; padding: 8px 12px; border-radius: 8px; }
+    }
+    .hero { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .hero-text { flex: 1; min-width: 0; }
+    .photo {
+      width: 180px; height: 225px; flex-shrink: 0;
+      object-fit: cover; object-position: top;
+      border-radius: 16px; border: 1px solid var(--line);
+    }
+    @media (max-width: 560px) {
+      .hero { flex-direction: column-reverse; align-items: flex-start; gap: 24px; }
+      .photo { width: 140px; height: 175px; }
+    }
+
     footer { padding: 32px 0 56px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
 
     @media (max-width: 560px) {
@@ -122,11 +139,24 @@
   <div class="wrap">
 
     <header>
+      <div class="hero">
+        <div class="hero-text">
+        <a class="org-logo" href="https://www.kistep.re.kr/eng/" target="_blank" rel="noopener" aria-label="KISTEP website">
+          <img src="kistep_logo.svg" alt="KISTEP - Korea Institute of S&amp;T Evaluation and Planning">
+        </a>
+        
       <h1>Hanul Kim</h1>
-      <p class="tagline">Associate Research Fellow, Center for Data Analytics Innovation, Office of Innovation Strategy, Korea Institute of S&amp;T Evaluation and Planning (KISTEP). Formerly a condensed matter physicist.</p>
+      <p class="tagline">Associate Research Fellow<br>
+        Center for Data Analytics Innovation<br>
+        Office of Innovation Strategy<br>
+        Korea Institute of S&amp;T Evaluation and Planning (KISTEP)<br>
+        Formerly a condensed matter physicist.</p>
       <div class="links">
         <a class="btn primary" href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a class="btn" href="mailto:hkim@kistep.re.kr">Email</a>
+      </div>
+        </div>
+        <img class="photo" src="photo.jpg" alt="Hanul Kim">
       </div>
     </header>
 
@@ -194,47 +224,35 @@
 
     <section id="publications">
       <h2>Publications</h2>
-      <p>My full list with citation counts is on <a href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>. Selected papers from my physics research are below; my name is in bold.</p>
+      <p>First-author and co-first-author papers from my physics research are listed below, with my name in bold. The complete list, including co-authored work and citation counts, is on <a href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
       <ul class="pubs">
         <li>
-          <span class="title">Origins of genuine Ohmic van der Waals contact between indium and MoS<sub>2</sub></span>
-          <span class="meta">BK Kim, TH Kim, DH Choi, <b>H Kim</b>, K Watanabe, T Taniguchi, H Rho, et al. · <i>npj 2D Materials and Applications</i> 5, 9 (2021)</span>
+          <span class="title">Temperature dependent Raman spectroscopy of shear and layer breathing modes in bilayer MoS<sub>2</sub></span>
+          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Current Applied Physics 25, 41–46</i> (2021)</span>
         </li>
         <li>
           <span class="title">Polarization-dependent anisotropic Raman response of CVD-grown vertically stacked MoS<sub>2</sub> layers</span>
-          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Journal of Raman Spectroscopy</i> 51, 774–780 (2020)</span>
+          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Journal of Raman Spectroscopy 51, 774–780</i> (2020)</span>
         </li>
         <li>
           <span class="title">Influence of chemical treatment on strain and charge doping in vertically stacked monolayer–bilayer MoS<sub>2</sub></span>
-          <span class="meta"><b>H Kim</b>, T Lee, H Ko, SM Kim, H Rho · <i>Applied Physics Letters</i> 117, 202104 (2020)</span>
+          <span class="meta"><b>H Kim</b>, T Lee, H Ko, SM Kim, H Rho · <i>Applied Physics Letters 117, 202104</i> (2020)</span>
         </li>
         <li>
           <span class="title">Charge transfer across monolayer/bilayer MoS<sub>2</sub> lateral interface and its influence on exciton and trion characteristics</span>
-          <span class="meta"><b>H Kim</b>, YG Yoon, H Ko, SM Kim, H Rho · <i>2D Materials</i> 6, 025004 (2019)</span>
+          <span class="meta"><b>H Kim</b>, YG Yoon, H Ko, SM Kim, H Rho · <i>2D Materials 6, 025004</i> (2019)</span>
         </li>
         <li>
           <span class="title">Energy dissipation mechanism revealed by spatially resolved Raman thermometry of graphene/hexagonal boron nitride heterostructure devices</span>
-          <span class="meta">D Kim<sup>†</sup>, <b>H Kim</b><sup>†</sup>, WS Yun, K Watanabe, T Taniguchi, H Rho, MH Bae · <i>2D Materials</i> 5, 025009 (2018)</span>
-        </li>
-        <li>
-          <span class="title">Temperature dependent Raman spectroscopy of shear and layer breathing modes in bilayer MoS<sub>2</sub></span>
-          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Current Applied Physics</i> 25, 41–46 (2021)</span>
+          <span class="meta">D Kim<sup>†</sup>, <b>H Kim</b><sup>†</sup>, WS Yun, K Watanabe, T Taniguchi, H Rho, MH Bae · <i>2D Materials 5, 025009</i> (2018)</span>
         </li>
         <li>
           <span class="title">Polarized and spatially resolved Raman scattering from composition-graded wurtzite InGaAs nanowires</span>
-          <span class="meta"><b>H Kim</b>, H Rho, EH Lee, JD Song · <i>Journal of Physics D: Applied Physics</i> 49, 175105 (2016)</span>
-        </li>
-        <li>
-          <span class="title">Resonant and polarized Raman scattering from single CdS/CdSe core–shell nanowires</span>
-          <span class="meta">JH Kim, <b>H Kim</b>, H Rho, YJ Choi, JG Park · <i>Journal of Physics D: Applied Physics</i> 47, 135104 (2014)</span>
+          <span class="meta"><b>H Kim</b>, H Rho, EH Lee, JD Song · <i>Journal of Physics D: Applied Physics 49, 175105</i> (2016)</span>
         </li>
         <li>
           <span class="title">Effect of Si doping on epitaxial lateral overgrowth of GaN: A spatially resolved micro-Raman scattering study</span>
-          <span class="meta"><b>H Kim</b>, H Rho, LW Jang, IH Lee · <i>Current Applied Physics</i> 13, 267–270 (2013)</span>
-        </li>
-        <li>
-          <span class="title">Coherent transverse-optical phonon generation induced by lattice defects in nitrogen-ion-implanted GaAs</span>
-          <span class="meta">JS Kim, HC Ryu, SH Kim, <b>H Kim</b>, H Rho, YJ Kim, YS Lim, KJ Yee · <i>Applied Physics Letters</i> 103, 171905 (2013)</span>
+          <span class="meta"><b>H Kim</b>, H Rho, LW Jang, IH Lee · <i>Current Applied Physics 13, 267–270</i> (2013)</span>
         </li>
       </ul>
       <p style="color:var(--muted);font-size:14px;margin-top:14px"><sup>†</sup> These authors contributed equally.</p>
