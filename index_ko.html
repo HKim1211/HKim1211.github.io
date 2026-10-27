@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hanul Kim | 과학기술정책 연구자</title>
+  <meta name="description" content="고체물리학 연구 배경의 과학기술정책 연구자 홈페이지">
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --text: #1f2328;
+      --muted: #5c6370;
+      --accent: #1d4e89;
+      --line: #e3e3dc;
+      --card: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14171c;
+        --text: #e6e8eb;
+        --muted: #9aa3af;
+        --accent: #7fb2f0;
+        --line: #2a2f37;
+        --card: #1b1f26;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav .wrap { display: flex; gap: 22px; padding-top: 14px; padding-bottom: 14px; font-size: 15px; }
+    nav a { color: var(--muted); }
+    nav a:hover { color: var(--accent); text-decoration: none; }
+
+    header { padding: 72px 0 40px; }
+    .hello { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: .04em; }
+    h1 { font-size: 40px; line-height: 1.25; margin: 8px 0 12px; }
+    .tagline { color: var(--muted); font-size: 18px; margin: 0 0 24px; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-block; padding: 8px 16px; border-radius: 999px;
+      border: 1px solid var(--line); background: var(--card);
+      color: var(--text); font-size: 14px;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+    .btn.primary:hover { color: var(--bg); opacity: .9; }
+
+    section { padding: 40px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 22px; margin: 0 0 18px; }
+    p { margin: 0 0 14px; }
+
+    .timeline { list-style: none; padding: 0; margin: 0; }
+    .timeline li { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 10px 0; }
+    .timeline .when { color: var(--muted); font-size: 14px; }
+    .timeline .what strong { display: block; }
+    .timeline .what span { color: var(--muted); font-size: 15px; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .tag {
+      font-size: 13px; padding: 3px 12px; border-radius: 999px;
+      background: var(--card); border: 1px solid var(--line); color: var(--muted);
+    }
+
+    .pubs { list-style: none; padding: 0; margin: 0; }
+    .pubs li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .pubs li:last-child { border-bottom: 0; }
+    .pubs .title { font-weight: 600; display: block; }
+    .pubs .meta { color: var(--muted); font-size: 14px; }
+    .pubs b { color: var(--text); }
+
+    footer { padding: 32px 0 56px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+
+    @media (max-width: 560px) {
+      h1 { font-size: 32px; }
+      .timeline li { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <a href="#about">소개</a>
+      <a href="#career">이력</a>
+      <a href="#projects">정책 연구</a>
+      <a href="#research">연구 관심사</a>
+      <a href="#publications">논문</a>
+      <a href="#contact">연락처</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+
+    <header>
+      <div class="hello">안녕하세요</div>
+            <h1>Hanul Kim</h1>
+      <p class="tagline">고체물리학 연구자에서 과학기술정책 연구자로.<br>KISTEP(한국과학기술기획평가원)</p>
+      <div class="links">
+        <a class="btn primary" href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn" href="mailto:hkim@kistep.re.kr">이메일</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>소개</h2>
+      <p>KISTEP에서 데이터에 기반한 국가 R&amp;D 분석과 과학기술정책 연구를 하고 있습니다. 전북대학교에서 응집물질물리로 2020년에 박사학위를 받고 같은 해 KISTEP에 합류했습니다.</p>
+      <p>KISTEP에서는 연구개발활동조사(2021~2022)와 국가연구개발사업 조사분석(2023~2025)의 연구책임자를 맡았고, 현재는 국가연구개발사업 성과분석을 이끌고 있습니다. 이 데이터들을 다루면서, 더 나은 데이터와 분석이 근거 기반 과학기술정책에 어떻게 기여할 수 있는지에 관심을 갖게 되었습니다.</p>
+      <p>직접 실험실에서 연구해 본 경험이 있어서, 연구비 지원과 평가 제도가 현장에서 어떻게 작동하는지를 연구자의 시각으로 함께 살펴보려 합니다.</p>
+    </section>
+
+    <section id="career">
+      <h2>이력</h2>
+      <ul class="timeline">
+        <li>
+          <div class="when">2020 – 현재</div>
+          <div class="what"><strong>KISTEP 부연구위원</strong><span>혁신전략본부 데이터분석혁신센터 (Associate Research Fellow)</span></div>
+        </li>
+        <li>
+          <div class="when">2012 – 2020</div>
+          <div class="what"><strong>전북대학교 석박사 통합과정</strong><span>응집물질물리</span></div>
+        </li>
+        <li>
+          <div class="when">2008 – 2012</div>
+          <div class="what"><strong>전북대학교 학사</strong><span></span></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>정책 연구</h2>
+      <p>KISTEP에서 연구책임자로 수행한 과제입니다.</p>
+      <ul class="timeline">
+        <li>
+          <div class="when">2026 – 현재</div>
+          <div class="what"><strong>국가연구개발사업 성과분석</strong><span>연구책임자</span></div>
+        </li>
+        <li>
+          <div class="when">2023 – 2025</div>
+          <div class="what"><strong>국가연구개발사업 조사분석</strong><span>연구책임자</span></div>
+        </li>
+        <li>
+          <div class="when">2021 – 2022</div>
+          <div class="what"><strong>연구개발활동조사</strong><span>연구책임자</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2>연구 관심사</h2>
+      <p><strong>과학기술정책</strong></p>
+      <div class="tags">
+        <span class="tag">데이터 기반 과학기술정책</span>
+        <span class="tag">국가연구개발사업 조사분석</span>
+        <span class="tag">국가연구개발사업 성과분석</span>
+        <span class="tag">R&amp;D 통계·조사</span>
+      </div>
+      <p style="margin-top:20px"><strong>고체물리학</strong></p>
+      <div class="tags">
+        <span class="tag">2차원 반도체 (MoS<sub>2</sub>)</span>
+        <span class="tag">라만 분광학</span>
+        <span class="tag">반데르발스 이종접합</span>
+        <span class="tag">반도체 나노와이어</span>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>논문</h2>
+      <p>전체 목록과 인용 정보는 <a href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar 프로필</a>에서 볼 수 있습니다. 아래는 주요 논문이며, 굵은 글씨가 저입니다.</p>
+      <ul class="pubs">
+        <li>
+          <span class="title">Origins of genuine Ohmic van der Waals contact between indium and MoS<sub>2</sub></span>
+          <span class="meta">BK Kim, TH Kim, DH Choi, <b>H Kim</b>, K Watanabe, T Taniguchi, H Rho, et al. · <i>npj 2D Materials and Applications 5, 9</i> (2021)</span>
+        </li>
+        <li>
+          <span class="title">Polarization-dependent anisotropic Raman response of CVD-grown vertically stacked MoS<sub>2</sub> layers</span>
+          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Journal of Raman Spectroscopy 51, 774–780</i> (2020)</span>
+        </li>
+        <li>
+          <span class="title">Influence of chemical treatment on strain and charge doping in vertically stacked monolayer–bilayer MoS<sub>2</sub></span>
+          <span class="meta"><b>H Kim</b>, T Lee, H Ko, SM Kim, H Rho · <i>Applied Physics Letters 117, 202104</i> (2020)</span>
+        </li>
+        <li>
+          <span class="title">Charge transfer across monolayer/bilayer MoS<sub>2</sub> lateral interface and its influence on exciton and trion characteristics</span>
+          <span class="meta"><b>H Kim</b>, YG Yoon, H Ko, SM Kim, H Rho · <i>2D Materials 6, 025004</i> (2019)</span>
+        </li>
+        <li>
+          <span class="title">Energy dissipation mechanism revealed by spatially resolved Raman thermometry of graphene/hexagonal boron nitride heterostructure devices</span>
+          <span class="meta">D Kim<sup>†</sup>, <b>H Kim</b><sup>†</sup>, WS Yun, K Watanabe, T Taniguchi, H Rho, MH Bae · <i>2D Materials 5, 025009</i> (2018)</span>
+        </li>
+        <li>
+          <span class="title">Temperature dependent Raman spectroscopy of shear and layer breathing modes in bilayer MoS<sub>2</sub></span>
+          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Current Applied Physics 25, 41–46</i> (2021)</span>
+        </li>
+        <li>
+          <span class="title">Polarized and spatially resolved Raman scattering from composition-graded wurtzite InGaAs nanowires</span>
+          <span class="meta"><b>H Kim</b>, H Rho, EH Lee, JD Song · <i>Journal of Physics D: Applied Physics 49, 175105</i> (2016)</span>
+        </li>
+        <li>
+          <span class="title">Resonant and polarized Raman scattering from single CdS/CdSe core–shell nanowires</span>
+          <span class="meta">JH Kim, <b>H Kim</b>, H Rho, YJ Choi, JG Park · <i>Journal of Physics D: Applied Physics 47, 135104</i> (2014)</span>
+        </li>
+        <li>
+          <span class="title">Effect of Si doping on epitaxial lateral overgrowth of GaN: A spatially resolved micro-Raman scattering study</span>
+          <span class="meta"><b>H Kim</b>, H Rho, LW Jang, IH Lee · <i>Current Applied Physics 13, 267–270</i> (2013)</span>
+        </li>
+        <li>
+          <span class="title">Coherent transverse-optical phonon generation induced by lattice defects in nitrogen-ion-implanted GaAs</span>
+          <span class="meta">JS Kim, HC Ryu, SH Kim, <b>H Kim</b>, H Rho, YJ Kim, YS Lim, KJ Yee · <i>Applied Physics Letters 103, 171905</i> (2013)</span>
+        </li>
+      </ul>
+      <p style="color:var(--muted);font-size:14px;margin-top:14px"><sup>†</sup> 공동 제1저자 (equal contribution)</p>
+    </section>
+
+    <section id="contact">
+      <h2>연락처</h2>
+      <p>이메일: <a href="mailto:hkim@kistep.re.kr">hkim@kistep.re.kr</a></p>
+      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">프로필 보기</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> Hanul Kim. 이 페이지의 내용은 개인 의견이며 소속 기관의 공식 입장이 아닙니다.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

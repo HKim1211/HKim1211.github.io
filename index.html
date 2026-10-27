@@ -1,12 +1,261 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>내 포트폴리오</title>
+  <title>Hanul Kim | Science &amp; Technology Policy Researcher</title>
+  <meta name="description" content="Hanul Kim is a science and technology policy researcher at KISTEP (Korea Institute of S&amp;T Evaluation and Planning) with a background in condensed matter physics.">
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --text: #1f2328;
+      --muted: #5c6370;
+      --accent: #1d4e89;
+      --line: #e3e3dc;
+      --card: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14171c;
+        --text: #e6e8eb;
+        --muted: #9aa3af;
+        --accent: #7fb2f0;
+        --line: #2a2f37;
+        --card: #1b1f26;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav .wrap { display: flex; flex-wrap: wrap; gap: 8px 22px; padding-top: 14px; padding-bottom: 14px; font-size: 15px; }
+    nav a { color: var(--muted); }
+    nav a:hover { color: var(--accent); text-decoration: none; }
+    nav .lang { margin-left: auto; }
+
+    header { padding: 72px 0 40px; }
+    .badge {
+      display: inline-block; font-size: 13px; font-weight: 600;
+      padding: 4px 12px; border-radius: 999px;
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      color: var(--accent); margin-bottom: 16px;
+    }
+    h1 { font-size: 42px; line-height: 1.2; margin: 0 0 12px; }
+    .tagline { color: var(--muted); font-size: 19px; margin: 0 0 24px; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-block; padding: 8px 16px; border-radius: 999px;
+      border: 1px solid var(--line); background: var(--card);
+      color: var(--text); font-size: 14px;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+    .btn.primary:hover { color: var(--bg); opacity: .9; }
+
+    section { padding: 40px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 22px; margin: 0 0 18px; }
+    p { margin: 0 0 14px; }
+
+    .card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;
+    }
+    .card strong { display: block; margin-bottom: 4px; }
+    .card span { color: var(--muted); font-size: 15px; }
+
+    .timeline { list-style: none; padding: 0; margin: 0; }
+    .timeline li { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 10px 0; }
+    .timeline .when { color: var(--muted); font-size: 14px; }
+    .timeline .what strong { display: block; }
+    .timeline .what span { color: var(--muted); font-size: 15px; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .tag {
+      font-size: 13px; padding: 3px 12px; border-radius: 999px;
+      background: var(--card); border: 1px solid var(--line); color: var(--muted);
+    }
+
+    .pubs { list-style: none; padding: 0; margin: 0; }
+    .pubs li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .pubs li:last-child { border-bottom: 0; }
+    .pubs .title { font-weight: 600; display: block; }
+    .pubs .meta { color: var(--muted); font-size: 14px; }
+    .pubs b { color: var(--text); }
+
+    footer { padding: 32px 0 56px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+
+    @media (max-width: 560px) {
+      h1 { font-size: 34px; }
+      .timeline li { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>안녕하세요, OOO입니다</h1>
-  <p>여기에 자기소개를 적어요.</p>
+
+  <nav>
+    <div class="wrap">
+      <a href="#about">About</a>
+      <a href="#career">Background</a>
+      <a href="#projects">Policy Research</a>
+      <a href="#research">Interests</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+      <a class="lang" href="index_ko.html">한국어</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+
+    <header>
+      <h1>Hanul Kim</h1>
+      <p class="tagline">Associate Research Fellow, Center for Data Analytics Innovation, Office of Innovation Strategy, Korea Institute of S&amp;T Evaluation and Planning (KISTEP). Formerly a condensed matter physicist.</p>
+      <div class="links">
+        <a class="btn primary" href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn" href="mailto:hkim@kistep.re.kr">Email</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I am a science and technology policy researcher at KISTEP, working on data-driven analysis of Korea's national R&amp;D system. I trained as a condensed matter physicist, earning my Ph.D. from Jeonbuk National University in 2020, and joined KISTEP the same year.</p>
+      <p>At KISTEP I have served as principal investigator of the Korea R&amp;D Survey (2021–2022) and the Analysis on Government R&amp;D Investment (2023–2025), and I currently lead the Government R&amp;D Performance Analysis. Working with these datasets has shaped my interest in how better data and analytics can support evidence-based science and technology policy.</p>
+      <p>Having done research in the lab myself, I also try to keep a researcher's point of view on how funding and evaluation systems work in practice.</p>
+    </section>
+
+    <section id="career">
+      <h2>Background</h2>
+      <ul class="timeline">
+        <li>
+          <div class="when">2020 – Present</div>
+          <div class="what"><strong>Associate Research Fellow, KISTEP</strong><span>Center for Data Analytics Innovation, Office of Innovation Strategy</span></div>
+        </li>
+        <li>
+          <div class="when">2012 – 2020</div>
+          <div class="what"><strong>Integrated M.S./Ph.D., Jeonbuk National University, Korea</strong><span>Condensed matter physics</span></div>
+        </li>
+        <li>
+          <div class="when">2008 – 2012</div>
+          <div class="what"><strong>B.S., Jeonbuk National University, Korea</strong><span></span></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Policy Research</h2>
+      <p>Projects I have led as principal investigator at KISTEP.</p>
+      <ul class="timeline">
+        <li>
+          <div class="when">2026 – Present</div>
+          <div class="what"><strong>Government R&amp;D Performance Analysis</strong><span>Principal Investigator</span></div>
+        </li>
+        <li>
+          <div class="when">2023 – 2025</div>
+          <div class="what"><strong>Analysis on Government R&amp;D Investment</strong><span>Principal Investigator</span></div>
+        </li>
+        <li>
+          <div class="when">2021 – 2022</div>
+          <div class="what"><strong>Korea R&amp;D Survey</strong><span>Principal Investigator</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <p><strong>Science &amp; technology policy</strong></p>
+      <div class="tags">
+        <span class="tag">Data-driven S&amp;T policy</span>
+        <span class="tag">Government R&amp;D investment analysis</span>
+        <span class="tag">R&amp;D performance analysis</span>
+        <span class="tag">R&amp;D statistics and surveys</span>
+      </div>
+      <p style="margin-top:20px"><strong>Prior work in physics</strong></p>
+      <div class="tags">
+        <span class="tag">2D semiconductors (MoS<sub>2</sub>)</span>
+        <span class="tag">Raman spectroscopy</span>
+        <span class="tag">van der Waals heterostructures</span>
+        <span class="tag">Semiconductor nanowires</span>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <p>My full list with citation counts is on <a href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>. Selected papers from my physics research are below; my name is in bold.</p>
+      <ul class="pubs">
+        <li>
+          <span class="title">Origins of genuine Ohmic van der Waals contact between indium and MoS<sub>2</sub></span>
+          <span class="meta">BK Kim, TH Kim, DH Choi, <b>H Kim</b>, K Watanabe, T Taniguchi, H Rho, et al. · <i>npj 2D Materials and Applications</i> 5, 9 (2021)</span>
+        </li>
+        <li>
+          <span class="title">Polarization-dependent anisotropic Raman response of CVD-grown vertically stacked MoS<sub>2</sub> layers</span>
+          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Journal of Raman Spectroscopy</i> 51, 774–780 (2020)</span>
+        </li>
+        <li>
+          <span class="title">Influence of chemical treatment on strain and charge doping in vertically stacked monolayer–bilayer MoS<sub>2</sub></span>
+          <span class="meta"><b>H Kim</b>, T Lee, H Ko, SM Kim, H Rho · <i>Applied Physics Letters</i> 117, 202104 (2020)</span>
+        </li>
+        <li>
+          <span class="title">Charge transfer across monolayer/bilayer MoS<sub>2</sub> lateral interface and its influence on exciton and trion characteristics</span>
+          <span class="meta"><b>H Kim</b>, YG Yoon, H Ko, SM Kim, H Rho · <i>2D Materials</i> 6, 025004 (2019)</span>
+        </li>
+        <li>
+          <span class="title">Energy dissipation mechanism revealed by spatially resolved Raman thermometry of graphene/hexagonal boron nitride heterostructure devices</span>
+          <span class="meta">D Kim<sup>†</sup>, <b>H Kim</b><sup>†</sup>, WS Yun, K Watanabe, T Taniguchi, H Rho, MH Bae · <i>2D Materials</i> 5, 025009 (2018)</span>
+        </li>
+        <li>
+          <span class="title">Temperature dependent Raman spectroscopy of shear and layer breathing modes in bilayer MoS<sub>2</sub></span>
+          <span class="meta"><b>H Kim</b>, H Ko, SM Kim, H Rho · <i>Current Applied Physics</i> 25, 41–46 (2021)</span>
+        </li>
+        <li>
+          <span class="title">Polarized and spatially resolved Raman scattering from composition-graded wurtzite InGaAs nanowires</span>
+          <span class="meta"><b>H Kim</b>, H Rho, EH Lee, JD Song · <i>Journal of Physics D: Applied Physics</i> 49, 175105 (2016)</span>
+        </li>
+        <li>
+          <span class="title">Resonant and polarized Raman scattering from single CdS/CdSe core–shell nanowires</span>
+          <span class="meta">JH Kim, <b>H Kim</b>, H Rho, YJ Choi, JG Park · <i>Journal of Physics D: Applied Physics</i> 47, 135104 (2014)</span>
+        </li>
+        <li>
+          <span class="title">Effect of Si doping on epitaxial lateral overgrowth of GaN: A spatially resolved micro-Raman scattering study</span>
+          <span class="meta"><b>H Kim</b>, H Rho, LW Jang, IH Lee · <i>Current Applied Physics</i> 13, 267–270 (2013)</span>
+        </li>
+        <li>
+          <span class="title">Coherent transverse-optical phonon generation induced by lattice defects in nitrogen-ion-implanted GaAs</span>
+          <span class="meta">JS Kim, HC Ryu, SH Kim, <b>H Kim</b>, H Rho, YJ Kim, YS Lim, KJ Yee · <i>Applied Physics Letters</i> 103, 171905 (2013)</span>
+        </li>
+      </ul>
+      <p style="color:var(--muted);font-size:14px;margin-top:14px"><sup>†</sup> These authors contributed equally.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:hkim@kistep.re.kr">hkim@kistep.re.kr</a></p>
+      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=s3kc6q8AAAAJ&hl=en" target="_blank" rel="noopener">view profile</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> Hanul Kim. Views expressed on this page are my own and do not represent the official position of my institution.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
